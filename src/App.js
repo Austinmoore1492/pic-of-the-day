@@ -1,8 +1,8 @@
-import React, { Component, Fragment } from "react";
-import axios from "axios";
-import DateInput from "./componenets/DateInput";
-import Photo from "./componenets/Photo";
-import Header from "./componenets/Header";
+import React, { Component, Fragment } from 'react';
+import axios from 'axios';
+import DateInput from './componenets/DateInput';
+import Photo from './componenets/Photo';
+import Header from './componenets/Header';
 
 class App extends Component {
   _isMounted = false;
@@ -10,16 +10,16 @@ class App extends Component {
   state = {
     isLoading: true,
     date: new Date(),
-    displayPhoto: "",
+    displayPhoto: '',
     photos: []
   };
 
   //Get Current Photo of the Day When Component Mounts Into The DOM
-  componentDidMount(date) {
+  componentDidMount() {
     this._isMounted = true;
 
     axios
-      .get(`https://api.nasa.gov/planetary/apod?&api_key=YourAPIKeyHere`)
+      .get(`https://api.nasa.gov/planetary/apod?&api_key=DEMO_KEY`)
       .then(response => {
         if (this._isMounted) {
           this.setState({
@@ -38,7 +38,7 @@ class App extends Component {
   changeDate = date => {
     this.setState({
       date,
-      displayPhoto: ""
+      displayPhoto: ''
     });
     this.getPhoto(date);
   };
@@ -54,9 +54,7 @@ class App extends Component {
   getPhoto = userDate => {
     let date = this.getDate(userDate);
     axios
-      .get(
-        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=YourAPIKeyHere`
-      )
+      .get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=DEMO_KEY`)
       .then(response =>
         this.setState({
           displayPhoto: response.data
