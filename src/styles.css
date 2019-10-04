@@ -51,6 +51,11 @@ img {
   margin: auto;
 }
 
+.dateSelect {
+  padding: 5px;
+  display: inline-block;
+}
+
 .nasaPics {
   display: -ms-grid;
   display: grid;
@@ -95,6 +100,10 @@ input[type='text'] {
     margin-bottom: 1rem;
   }
 
+  .dateSelect {
+    display: block;
+  }
+
   .nasaPics {
     display: -ms-grid;
     display: grid;
@@ -109,9 +118,9 @@ input[type='text'] {
   }
 
   input[type='text'] {
-    display: block;
     margin: auto;
     margin-top: 0.5rem;
+    width: 100%;
   }
 
   .react-datepicker-wrapper,
