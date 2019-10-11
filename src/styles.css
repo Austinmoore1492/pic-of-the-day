@@ -21,8 +21,27 @@ body {
   margin: auto;
 }
 
+#header {
+  position: relative;
+}
+
+#header > h1 {
+  color: #1d1d1d;
+  text-shadow: -1px -1px 0 #ccc, 1px -1px 0 #ccc, -1px 1px 0 #ccc,
+    1px 1px 0 #ccc;
+}
+
+canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
 h1 {
-  background: -o-linear-gradient(
+  /* background: -o-linear-gradient(
     bottom,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.8) 70%
@@ -38,7 +57,8 @@ h1 {
     0deg,
     rgba(0, 0, 0, 0) 0%,
     rgba(0, 0, 0, 0.8) 70%
-  );
+  ); */
+  background: #1d1d1d;
   text-align: center;
   color: white;
   padding: 1rem;
@@ -90,14 +110,21 @@ input[type='text'] {
     width: 80%;
   }
 
-  h1 {
+  #header > h1 {
+    color: #f0f0f0;
+    text-shadow: none;
     font-size: 1.3rem;
     margin-bottom: 0;
+    background: #333;
   }
 
   img {
     max-width: 80%;
     margin-bottom: 1rem;
+  }
+
+  canvas {
+    display: none;
   }
 
   .dateSelect {

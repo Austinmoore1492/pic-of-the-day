@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
+
 import axios from 'axios';
+
 import DateInput from './componenets/DateInput';
 import Photo from './componenets/Photo';
 import Header from './componenets/Header';
