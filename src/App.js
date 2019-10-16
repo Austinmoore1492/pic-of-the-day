@@ -68,6 +68,7 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
+
         <div className="container">
           <DateInput changeDate={this.changeDate} date={this.state.date} />
           <Photo photo={this.state.displayPhoto} />
