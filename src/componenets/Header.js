@@ -17,11 +17,11 @@ class Header extends Component {
                 }
               },
               line_linked: {
-                enable: true,
-                opacity: 0.02
+                enable: false
               },
               move: {
-                direction: 'right',
+                random: true,
+                direction: 'bottom',
                 speed: 0.05
               },
               size: {
