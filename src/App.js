@@ -21,7 +21,9 @@ class App extends Component {
     this._isMounted = true;
 
     axios
-      .get(`https://api.nasa.gov/planetary/apod?&api_key=DEMO_KEY`)
+      .get(
+        `https://api.nasa.gov/planetary/apod?&api_key=Q2Envml3VlUhxeQb6ciN5EY7x2h4zxqRNEHAepLk`
+      )
       .then(response => {
         if (this._isMounted) {
           this.setState({
@@ -56,7 +58,9 @@ class App extends Component {
   getPhoto = userDate => {
     let date = this.getDate(userDate);
     axios
-      .get(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=DEMO_KEY`)
+      .get(
+        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=Q2Envml3VlUhxeQb6ciN5EY7x2h4zxqRNEHAepLk`
+      )
       .then(response =>
         this.setState({
           displayPhoto: response.data
