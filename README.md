@@ -2,7 +2,7 @@
 
 Use this to see NASAs picture/video of the day.
 
-> [Live Site](https://csb-5ykb2-k3fbbrtss.now.sh)
+> [Live Site](https://csb-5ykb2-p81hngpdt.now.sh/)
 
 ## Project setup
 
