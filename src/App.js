@@ -1,10 +1,10 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment } from "react";
 
-import axios from 'axios';
+import axios from "axios";
 
-import DateInput from './componenets/DateInput';
-import Photo from './componenets/Photo';
-import Header from './componenets/Header';
+import DateInput from "./componenets/DateInput";
+import Photo from "./componenets/Photo";
+import Header from "./componenets/Header";
 
 class App extends Component {
   _isMounted = false;
@@ -12,7 +12,7 @@ class App extends Component {
   state = {
     isLoading: true,
     date: new Date(),
-    displayPhoto: '',
+    displayPhoto: "",
     photos: []
   };
 
@@ -40,7 +40,7 @@ class App extends Component {
   changeDate = date => {
     this.setState({
       date,
-      displayPhoto: ''
+      displayPhoto: ""
     });
     this.getPhoto(date);
   };
