@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from "react";
-import dotenv from "dotenv";
 import axios from "axios";
 
 import DateInput from "./componenets/DateInput";
@@ -19,13 +18,10 @@ class App extends Component {
   //Get Current Photo of the Day When Component Mounts Into The DOM
   componentDidMount() {
     this._isMounted = true;
-    dotenv.config({ path: "./config.env" });
 
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?&api_key=${
-          process.env.REACT_APP_API_KEY
-        }`
+        `https://api.nasa.gov/planetary/apod?&api_key=Q2Envml3VlUhxeQb6ciN5EY7x2h4zxqRNEHAepLk`
       )
       .then(response => {
         if (this._isMounted) {
@@ -59,13 +55,10 @@ class App extends Component {
 
   //Get Photo of Date User Request
   getPhoto = userDate => {
-    dotenv.config({ path: "./config.env" });
     let date = this.getDate(userDate);
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=${
-          process.env.REACT_APP_API_KEY
-        }`
+        `https://api.nasa.gov/planetary/apod?date=${date}&api_key=Q2Envml3VlUhxeQb6ciN5EY7x2h4zxqRNEHAepLk`
       )
       .then(response =>
         this.setState({
