@@ -2,7 +2,7 @@
 
 Use this to see NASAs picture/video of the day.
 
-> [Live Site](https://csb-5ykb2.austinmoore1492.now.sh/)
+> [Live Site](https://competent-lumiere-2da81c.netlify.com/) Hosted on Netlify
 
 ## Project setup
 
@@ -33,13 +33,14 @@ npm run test
 ```
 npm run lint
 ```
+
 =======
+
 # Nasa Picture of the day
 
 Use this to see NASAs picture/video of the day.
 
 > [Live Site](https://csb-5ykb2-k3fbbrtss.now.sh)
-
 
 ## Project setup
 
